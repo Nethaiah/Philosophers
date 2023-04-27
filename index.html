@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Philosophers</title>
+</head>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    html{
+        font-size: 16px;
+    }
+    body{
+        background-image: url(BackgroundImage.jpg);
+        height: auto;
+        width: auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .homecontainer{
+        display: flex;
+    }
+    .textContainer{
+        color: whitesmoke;
+        width: 40vw;
+        margin-top: 14%;
+        margin-left: 10%;
+    }
+    .punchline{
+        font-size: 3.25rem;
+        font-weight: 500;
+    }
+    .subpuncline{
+        font-size: 1.25rem;
+        letter-spacing: 2px;
+        font-weight: 300;
+    }
+    .author{
+        font-size: 1.50rem;
+        letter-spacing: 2px;
+        font-weight: 400;
+    }
+    .form{
+        color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        margin-top: 14%;
+        margin-left: 16%;
+        width: 20vw;
+    }
+    label{
+        display: flex;
+        flex-direction: column;
+        letter-spacing: 4px;
+        margin-bottom: 0.5000em;
+        font-size: 1rem;
+    }
+    input{
+        background-color: transparent;
+        color: whitesmoke;
+        letter-spacing: 3px;
+        font-size: 0.75rem;
+        padding: 0.25rem 0.675rem; 
+        margin-bottom: 1.5em;
+        width: 100%;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        border-bottom: 2px solid whitesmoke;
+        transition: 0.5s;
+    }
+    input:focus,
+    input:valid,
+    input:hover{
+        border: 2px solid whitesmoke;
+    }
+    .button{
+        display: flex;
+        justify-content: space-around;
+    }
+    a{
+        text-decoration: none;
+        position: relative;
+        color: whitesmoke;
+        padding: 0.225em 0.938em;
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: 4px;
+        background-color: black;
+        transition: 0.3s ease-in-out;
+    }
+    a::after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        background: whitesmoke;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: 0.5s ease-in-out;
+    }
+    a:hover{
+        letter-spacing: 6px;
+    }
+    a:hover::after{
+        border-radius: 8px;
+        transform: scaleX(1);
+    }
+
+    @media (max-width: 800px){
+        .punchline{
+            font-size: 2.50rem;
+        }
+        .subpuncline{
+            font-size: 1rem;
+        }
+        .author{
+            font-size: 1.25rem;
+        }
+        .form{
+            margin-left: 12%;
+            width: 13.5rem;
+        }
+        input{
+            width: 70%;
+        }
+    }
+    @media (max-width: 650px){
+        .homecontainer{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .textContainer{
+            color: whitesmoke;
+            width: 80vw;
+            margin: 14% 10%;
+        }
+        .form{
+            margin: 10%;
+            width: 60vw;
+        }
+        input{
+            width: 100%;
+        }
+    }
+    @media (max-width: 321px){
+        .form{
+            margin: 5%;
+            width: 90vw;
+        }
+        input{
+            width: 100%;
+        }
+    }
+
+</style>
+
+<body>
+    <div class="homecontainer">
+        <div class="textContainer">
+            <p class="punchline">Learning never exhausts the mind.</p>
+            <p class="subpuncline">"Your mind has infinite space and capacity for generating and storing new ideas, concepts, and skills."</p>
+            <p class="author">Leonardo DaVinci</p>
+        </div>
+        <div class="form">
+            <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+                <div class="Username">
+                    <label for="Username">Username</label>
+                    <input type="text" name="Username" id="Username" autocomplete="off" required="">
+                </div>
+                <div class="Email">
+                    <label for="Email">Email</label>
+                    <input type="email" name="Email" id="Email" autocomplete="off" required="">
+                </div>
+                <div class="Password">
+                    <label for="Password">Password</label>
+                    <input type="password" name="Password" id="Password" required="">
+                </div>
+                <div class="button">
+                    <a href="Mainpage.html" class="logIn">Log In</a>
+                    <a href="Mainpage.html" class="seeMore">See More</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
